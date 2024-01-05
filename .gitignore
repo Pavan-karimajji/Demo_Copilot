@@ -1,0 +1,12 @@
+# Ignore build folder
+build/
+.vs
+
+# Visual Studio files
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+*.ncb
+*.sln.docstates
