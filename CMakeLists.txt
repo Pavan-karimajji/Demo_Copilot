@@ -10,6 +10,7 @@ include_directories(include)
 set(SOURCE_FILES
     src/main.cpp
     src/KinematicModel.cpp
+    src/ScientificCalculator.cpp
 )
 
 # Create the executable
@@ -29,6 +30,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 # Add the test source file
 set(TEST_SOURCE_FILES
     src/test_KinematicModel.cpp
+    src/TestScientificCalculator.cpp
 )
 
 # Create the test executable, linking against the library
