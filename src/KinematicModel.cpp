@@ -6,8 +6,8 @@ KinematicModel::KinematicModel(double initialPosition, double initialVelocity, d
     : position(initialPosition), velocity(initialVelocity), acceleration(acceleration) {}
 
 
-// Update method
-void KinematicModel::update(double deltaTime) { 
+//update method
+void KinematicModel::update(double deltaTime) {
     // Using constant acceleration model: s = ut + (1/2)at^2, v = u + at
     position += velocity * deltaTime + 0.5 * acceleration * deltaTime * deltaTime;
     velocity += acceleration * deltaTime;

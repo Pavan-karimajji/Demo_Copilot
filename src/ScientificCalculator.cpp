@@ -1,18 +1,15 @@
 #include "ScientificCalculator.h"
 #include <cmath>
+#include <stdexcept>
 
 double ScientificCalculator::add(double a, double b) {
-    // QAC: Implicit conversion from int to double
-    int intValue = 5; // or any integer value
-    double result = a + b + intValue;
+    double result = a + b;
     return result;
 }
 
 double ScientificCalculator::subtract(double a, double b) {
     return a - b;
 }
-
-#include <stdexcept>
 
 double ScientificCalculator::multiply(double a, double b) {
     return a * b;
@@ -36,9 +33,41 @@ double ScientificCalculator::squareRoot(double value) {
     return std::sqrt(value);
 }
 
+double ScientificCalculator::sin(double value) {
+	return std::sin(value);
+}
+
+double ScientificCalculator::cos(double value) {
+	return std::cos(value);
+}
+
+double ScientificCalculator::tan(double value) {
+	return std::tan(value);
+}
+
 double ScientificCalculator::log(double value) {
-    if (value <= 0) {
-		throw std::invalid_argument("Cannot calculate log of a non-positive number");
-	}
 	return std::log(value);
 }
+
+double ScientificCalculator::factorial(double value) {
+    if (value < 0) {
+		throw std::invalid_argument("Cannot calculate factorial of a negative number");
+	}
+    if (value == 0) {
+		return 1;
+	}
+	return value * factorial(value - 1);
+}
+
+double ScientificCalculator::absolute(double value) {
+	return std::abs(value);
+}
+
+double ScientificCalculator::inverse(double value) {
+    if (value == 0) {
+		throw std::invalid_argument("Cannot calculate inverse of zero");
+	}
+	return 1 / value;
+}
+
+// Path: src/ScientificCalculator.cpp
